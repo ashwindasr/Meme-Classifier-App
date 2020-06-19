@@ -117,7 +117,7 @@ class Utils {
         return resizedBitmap;
     }
 
-    public static boolean isMeme(String path) {
+    public static boolean isNotMeme(String path) {
         // Insert Code HERE
         // tflite.run(imgData, labelProbArray);
         // return new Random().nextBoolean();

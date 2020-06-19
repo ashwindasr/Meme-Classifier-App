@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -44,6 +45,9 @@ class GridViewAdapter extends BaseAdapter {
         if (convertView == null) {
             holder = new ViewHolder();
             convertView = mInflater.inflate(R.layout.griditem, null);
+
+            convertView.setLayoutParams(new GridView.LayoutParams(250, 250));
+
             holder.imageButton = (ImageButton) convertView.findViewById(R.id.img_view);
             convertView.setTag(holder);
         } else {

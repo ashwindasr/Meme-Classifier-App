@@ -81,14 +81,15 @@ public class MainActivity extends AppCompatActivity {
     public void itemClicked(int position) {
         String imagePath = images.get(position);
         Log.d("MainClick", imagePath);
-        if (Utils.isMeme(imagePath)) {
+        if (Utils.isNotMeme(imagePath)) {
             Toast.makeText(this, "This is not a meme", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "This is a meme", Toast.LENGTH_SHORT).show();
+//            images.remove(position);
+//            gridViewAdapter.notifyDataSetChanged();
+//            gridView.invalidateViews();
         }
-//        images.remove(position);
-//        gridViewAdapter.notifyDataSetChanged();
-//        gridView.invalidateViews();
+
     // DELETE FILE HERE
 
     }
